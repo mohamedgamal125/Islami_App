@@ -49,9 +49,10 @@ class _HomeState extends State<Home> {
             currentIndex: index,
             items: [
               BottomNavigationBarItem(
-                icon: ImageIcon(AssetImage("Assets/images/radio_blue.png")),
-                label: "Radio ",
+                icon:ImageIcon(AssetImage("Assets/images/moshaf_blue.png")),
+                label: "Moshaf",
                 backgroundColor: MyThemeData.primaryColor,
+
               ),
               BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("Assets/images/sebha_blue.png")),
@@ -66,14 +67,10 @@ class _HomeState extends State<Home> {
 
               ),
               BottomNavigationBarItem(
-                icon:ImageIcon(AssetImage("Assets/images/moshaf_blue.png")),
-                label: "Moshaf",
-                  backgroundColor: MyThemeData.primaryColor,
-
+                icon: ImageIcon(AssetImage("Assets/images/radio_blue.png")),
+                label: "Radio ",
+                backgroundColor: MyThemeData.primaryColor,
               ),
-
-
-
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
                 label: "Settings",

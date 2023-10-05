@@ -25,6 +25,7 @@ class MyThemeData {
         ),
       ),
       appBarTheme: AppBarTheme(
+        iconTheme: IconThemeData(color: primaryColor,size: 30),
         color: Colors.transparent,
         elevation: 0.0,
         centerTitle: true,
