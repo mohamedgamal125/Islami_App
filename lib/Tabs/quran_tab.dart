@@ -16,6 +16,7 @@ class QuranTab extends StatelessWidget {
   ,"التين","العلق","القدر","البينة","الزلزلة","العاديات","القارعة","التكاثر","العصر",
   "الهمزة","الفيل","قريش","الماعون","الكوثر","الكافرون","النصر","المسد","الإخلاص","الفلق","الناس"];
 
+
   @override
   Widget build(BuildContext context) {
     return  Center(
@@ -48,7 +49,6 @@ class QuranTab extends StatelessWidget {
               ,itemBuilder: (context,index){
               return InkWell(
                 onTap: (){
-
                   Navigator.pushNamed(context, SuraDetailsScreen.routeName,
                   arguments: SuraModel(suraName[index], index)
                   );

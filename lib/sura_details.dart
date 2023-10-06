@@ -12,7 +12,6 @@ class SuraDetailsScreen extends StatefulWidget {
 
 class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   List<String>verses=[];
-
   @override
   Widget build(BuildContext context) {
     var args=ModalRoute.of(context)?.settings.arguments as SuraModel;
@@ -47,7 +46,8 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: ListView.separated(
+              child:(verses.length==0)?Center(child: (CircularProgressIndicator())):
+              ListView.separated(
                 separatorBuilder: (context,index)=>Divider(
                   indent: 40,endIndent: 40,
                   color: MyThemeData.primaryColor,
@@ -78,10 +78,8 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   loadFile (int index)async {
      String file =await  rootBundle.loadString("Assets/files/${index+1}.txt");
      List<String>lines=file.split("\n");
-
      verses=lines;
      setState(() {
-
      });
   }
 }
