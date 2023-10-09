@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyThemeData {
-  
-  static Color primaryColor=Color(0xffB7935F);
-  static Color blackColor=Color(0xff141A2E);
+  static Color primaryColor = Color(0xffB7935F);
+  static Color blackColor = Color(0xff141A2E);
   static ThemeData liteMode = ThemeData(
       scaffoldBackgroundColor: Colors.transparent,
       textTheme: TextTheme(
@@ -25,18 +24,16 @@ class MyThemeData {
         ),
       ),
       appBarTheme: AppBarTheme(
-        iconTheme: IconThemeData(color: primaryColor,size: 30),
+        iconTheme: IconThemeData(color: primaryColor, size: 30),
         color: Colors.transparent,
         elevation: 0.0,
         centerTitle: true,
       ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      type: BottomNavigationBarType.shifting,
-      selectedItemColor: blackColor,
-      unselectedItemColor: Colors.white,
-
-    )
-  );
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        type: BottomNavigationBarType.shifting,
+        selectedItemColor: blackColor,
+        unselectedItemColor: Colors.white,
+      ));
 
   static ThemeData darkTheme = ThemeData();
 }

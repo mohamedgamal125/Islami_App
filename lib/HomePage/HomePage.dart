@@ -16,7 +16,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int index=0;
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -31,54 +31,43 @@ class _HomeState extends State<Home> {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             elevation: 0,
-            title: Text(
-                AppLocalizations.of(context)!.appTitle,
+            title: Text(AppLocalizations.of(context)!.appTitle,
                 style: Theme.of(context).textTheme.bodyLarge),
             centerTitle: true,
             backgroundColor: Colors.transparent,
           ),
-
-          body: tabs[
-            index
-          ],
-
+          body: tabs[index],
           bottomNavigationBar: BottomNavigationBar(
-            onTap: (value){
-              index=value;
-              setState(() {
-
-              });
+            onTap: (value) {
+              index = value;
+              setState(() {});
             },
             currentIndex: index,
             items: [
               BottomNavigationBarItem(
-                icon:ImageIcon(AssetImage("Assets/images/moshaf_blue.png")),
-                label: "Moshaf",
+                icon: ImageIcon(AssetImage("Assets/images/moshaf_blue.png")),
+                label: AppLocalizations.of(context)!.quran,
                 backgroundColor: MyThemeData.primaryColor,
-
               ),
               BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("Assets/images/sebha_blue.png")),
-                label: "Sebha",
+                label: AppLocalizations.of(context)!.sebha,
                 backgroundColor: MyThemeData.primaryColor,
-
               ),
               BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("Assets/images/quran.png")),
-                label: "Quran",
+                label: AppLocalizations.of(context)!.ahdeth,
                 backgroundColor: MyThemeData.primaryColor,
-
               ),
               BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("Assets/images/radio_blue.png")),
-                label: "Radio ",
+                label: AppLocalizations.of(context)!.radio,
                 backgroundColor: MyThemeData.primaryColor,
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
-                label: "Settings",
+                label: AppLocalizations.of(context)!.settings,
                 backgroundColor: MyThemeData.primaryColor,
-
               ),
             ],
           ),
@@ -87,7 +76,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  List<Widget>tabs=[
+  List<Widget> tabs = [
     QuranTab(),
     SebhaTab(),
     AhadethTab(),

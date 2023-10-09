@@ -7,5 +7,10 @@
   "tasbeh": "sobhan Allah",
   "radio": "Radio",
   "settings": "Settings",
-  "num": "Number Of Tasbee7"
+  "num": "Number Of Tasbee7",
+  "madeBy": "Made By: Mohamed Gamal",
+  "language": "Language",
+  "theme": "Theme",
+  "arabic":"Arabic" ,
+  "english": "English"
 }
