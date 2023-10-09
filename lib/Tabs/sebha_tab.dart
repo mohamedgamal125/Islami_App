@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class SebhaTab extends StatefulWidget {
   @override
   State<SebhaTab> createState() => _SebhaTabState();
@@ -20,7 +20,7 @@ class _SebhaTabState extends State<SebhaTab> {
              fit: BoxFit.fill,
             ),
           ),
-          Text("Number of Tasbee7",
+          Text(AppLocalizations.of(context)!.num,
             style: Theme.of(context).textTheme.bodyLarge,
           ),
 
@@ -59,7 +59,9 @@ class _SebhaTabState extends State<SebhaTab> {
 
                   });
                 },
-                child: Text("Sohan Allah",style: Theme.of(context).textTheme.bodyMedium,)
+                child: Text(
+                  AppLocalizations.of(context)!.tasbeh
+                  ,style: Theme.of(context).textTheme.bodyMedium,)
 
             ),
           )

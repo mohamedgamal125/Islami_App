@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/Model/sura_model.dart';
@@ -46,7 +48,8 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child:(verses.length==0)?Center(child: (CircularProgressIndicator())):
+              child:(verses.length==0)?Center(child: (CircularProgressIndicator())
+              ):
               ListView.separated(
                 separatorBuilder: (context,index)=>Divider(
                   indent: 40,endIndent: 40,
@@ -79,7 +82,10 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
      String file =await  rootBundle.loadString("Assets/files/${index+1}.txt");
      List<String>lines=file.split("\n");
      verses=lines;
-     setState(() {
+     Timer(Duration(seconds: 1), () {
+       setState(() {
+       });
      });
+
   }
 }

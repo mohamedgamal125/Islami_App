@@ -5,6 +5,7 @@ import 'package:islami_app/Tabs/quran_tab.dart';
 import 'package:islami_app/Tabs/radio_tab.dart';
 import 'package:islami_app/Tabs/sebha_tab.dart';
 import 'package:islami_app/Tabs/settings_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/Theming/MyThemeData.dart';
 
 class Home extends StatefulWidget {
@@ -30,7 +31,9 @@ class _HomeState extends State<Home> {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             elevation: 0,
-            title: Text("Islame", style: Theme.of(context).textTheme.bodyLarge),
+            title: Text(
+                AppLocalizations.of(context)!.appTitle,
+                style: Theme.of(context).textTheme.bodyLarge),
             centerTitle: true,
             backgroundColor: Colors.transparent,
           ),

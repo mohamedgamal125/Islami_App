@@ -8,9 +8,12 @@ import '../hadeth_details.dart';
 class AhadethTab extends StatelessWidget {
   List<HadethModel>allAhadeth=[];
 
+
+
   @override
   Widget build(BuildContext context) {
-    loadHadeth();
+
+    fun();
     return  Center(
       child: Column(
 
@@ -84,5 +87,12 @@ class AhadethTab extends StatelessWidget {
       print(e.toString());
     });
 
+  }
+
+  void fun()async{
+
+    if(allAhadeth.isEmpty) {
+     await loadHadeth();
+    }
   }
 }
