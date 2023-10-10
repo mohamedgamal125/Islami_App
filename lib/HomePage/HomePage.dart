@@ -7,6 +7,8 @@ import 'package:islami_app/Tabs/sebha_tab.dart';
 import 'package:islami_app/Tabs/settings_tab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/Theming/MyThemeData.dart';
+import 'package:islami_app/providers/myProvider.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   static const String routeName = "Home";
@@ -20,10 +22,12 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    var pro=Provider.of<MyProvider>(context);
     return Stack(
       children: [
         Image.asset(
-          "Assets/images/bg3.png",
+          pro.getBackground(
+          ),
           width: double.infinity,
           fit: BoxFit.fill,
         ),

@@ -5,6 +5,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/providers/myProvider.dart';
 import 'package:provider/provider.dart';
 
+import '../bottomSheets/themingBottomSheet.dart';
+
 class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -38,19 +40,14 @@ class Settings extends StatelessWidget {
           ),
           Text(AppLocalizations.of(context)!.theme,
               style: Theme.of(context).textTheme.bodySmall),
-          InkWell(
-            onTap: () {
-              showThemeBottomSheet(context);
-            },
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  border: Border.all(color: MyThemeData.primaryColor),
-                  borderRadius: BorderRadius.circular(25)),
-              child:
-                  Text("Light", style: Theme.of(context).textTheme.bodySmall),
-            ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            width: double.infinity,
+            decoration: BoxDecoration(
+                border: Border.all(color: MyThemeData.primaryColor),
+                borderRadius: BorderRadius.circular(25)),
+            child:
+                Text("Light", style: Theme.of(context).textTheme.bodySmall),
           ),
           Spacer(),
           Center(
@@ -87,9 +84,7 @@ class Settings extends StatelessWidget {
           borderSide: BorderSide(color: Colors.transparent),
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(16), topRight: Radius.circular(16))),
-      builder: (context) => Container(
-        height: MediaQuery.of(context).size.height * 0.3,
-      ),
+      builder: (context) => ThemeingBottomSheet()
     );
   }
 }
